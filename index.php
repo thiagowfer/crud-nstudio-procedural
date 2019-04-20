@@ -21,9 +21,13 @@ include_once "includes/header.php";
 					<td>Ferreira</td>
 					<td>thiagowfer@gmail.com</td>
 					<td>31</td>
+					<td><a href="" class="btn-floating orange"><i class="material-icons">edit</i></a></td>
+					<td><a href="" class="btn-floating red"><i class="material-icons">delete</i></a></td>
 				</tr>
 			</tbody>
 		</table>	
+		<br>
+		<a href="" class="btn">Adicionar Cliente</a>
 	</div>
 </div>
 
