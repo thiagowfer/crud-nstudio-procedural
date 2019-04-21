@@ -23,8 +23,8 @@ include_once "includes/header.php";
 				<input type="text" name="idade" id="idade">
 				<label for="idade">Idade</label>
 			</div>
-			<button class="btn" type="submit">Cadastrar</button>
-			<button class="btn green" type="submit">Lista de Clientes</button>
+			<button class="btn" name="btn-cadastrar" type="submit">Cadastrar</button>
+			<a href="index.php" class="btn green" type="submit">Lista de Clientes</a>
 		</form>
 	</div>
 </div>
