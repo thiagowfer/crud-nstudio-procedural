@@ -18,8 +18,8 @@ endif;
 	<div class="col s12 m6 push-m3">
 		<h3 class="light">Editar Cliente</h3>
 		
-			<form action="php_action/create.php" method="post">
-			<input type="hidden" id="<?php echo $dados['id']; ?>">
+			<form action="php_action/update.php" method="post">
+			<input type="hidden" value="<?php echo $dados['id']; ?>">
 			<div class="input-field col s12">
 				<input type="text" name="nome" id="nome" 
 				value="<?php echo $dados['nome']; ?>">
