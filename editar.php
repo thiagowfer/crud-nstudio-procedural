@@ -19,7 +19,7 @@ endif;
 		<h3 class="light">Editar Cliente</h3>
 		
 			<form action="php_action/update.php" method="post">
-			<input type="hidden" value="<?php echo $dados['id']; ?>">
+			<input type="hidden" name="id" value="<?php echo $dados['id']; ?>" >
 			<div class="input-field col s12">
 				<input type="text" name="nome" id="nome" 
 				value="<?php echo $dados['nome']; ?>">
