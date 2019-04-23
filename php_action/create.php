@@ -2,11 +2,19 @@
 require_once "db_connect.php";
 session_start();
 
+//Função que protege de códigos maliciosos XSS
+function clear($input){
+	global $connect;
+	$var = mysqli_escape_string($connect, $input);
+	$var = htmlspecialchars($var);
+	return $var;
+}
+
 if(isset($_POST['btn-cadastrar'])){
-	$nome = mysqli_escape_string($connect, $_POST['nome']);
-	$sobrenome = mysqli_escape_string($connect, $_POST['sobrenome']);
-	$email = mysqli_escape_string($connect, $_POST['email']);
-	$idade = mysqli_escape_string($connect, $_POST['idade']);
+	$nome = clear($_POST['nome']);
+	$sobrenome = clear($_POST['sobrenome']);
+	$email = clear($_POST['email']);
+	$idade = clear($_POST['idade']);
 
 	$sql = "INSERT INTO clientes (nome, sobrenome, email, idade) 
 	VALUES ('$nome', '$sobrenome', '$email', '$idade')";
