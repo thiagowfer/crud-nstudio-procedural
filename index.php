@@ -44,9 +44,11 @@ include_once "includes/message.php";
 					      
 					      <form action="php_action/delete.php" method="post">
 					      	<input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
+
 					      	<button type="submit" name="btn-deletar" class="btn red">Sim! Quero deletar</button>
 					      	<a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
 					      </form>
+					      
 					    </div>
 					  </div>
 				</tr>
