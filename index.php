@@ -23,6 +23,9 @@ include_once "includes/message.php";
 				<?php
 				$sql = "SELECT * FROM clientes ORDER BY nome";
 				$resultado = mysqli_query($connect, $sql);
+
+			if(mysqli_num_rows($resultado) > 0):
+
 				while($dados = mysqli_fetch_array($resultado)):
 				?>
 				<tr>
@@ -48,12 +51,25 @@ include_once "includes/message.php";
 					      	<button type="submit" name="btn-deletar" class="btn red">Sim! Quero deletar</button>
 					      	<a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
 					      </form>
-					      
+
 					    </div>
 					  </div>
 				</tr>
 			</tbody>
-				<?php endwhile; ?>
+			<?php 
+				endwhile;
+			else: 
+			?>
+			<tr>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+
+			<?php	 
+			endif;
+			?>
 		</table>	
 		<br>
 		<a href="adicionar.php" class="btn">Adicionar Cliente</a>
