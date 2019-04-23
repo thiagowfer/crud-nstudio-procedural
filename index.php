@@ -8,23 +8,24 @@ include_once "includes/message.php";
 ?>
 
 <div class="row">
-	<div class="col s12 m6 push-m3">
+	<div class="col s12 m8 push-m2">
 		<h3 class="light">Clientes</h3>
 		<table class="striped">
 			<thead>
-			<tr>				
-				<th>Nome: </th>
-				<th>Sobrenome:</th>
-				<th>Email:</th>
-				<th>Idade:</th>			
-			</tr>
+				<tr>				
+					<th>Nome: </th>
+					<th>Sobrenome:</th>
+					<th>Email:</th>
+					<th>Idade:</th>			
+				</tr>
 			</thead>
+
 			<tbody>
 				<?php
 				$sql = "SELECT * FROM clientes ORDER BY nome";
 				$resultado = mysqli_query($connect, $sql);
 
-			if(mysqli_num_rows($resultado) > 0):
+				if(mysqli_num_rows($resultado) > 0):
 
 				while($dados = mysqli_fetch_array($resultado)):
 				?>
@@ -55,9 +56,12 @@ include_once "includes/message.php";
 					    </div>
 					  </div>
 				</tr>
-			</tbody>
-			<?php 
+				<?php 
 				endwhile;
+				?>
+			<?php ?>
+			</tbody>
+			<?php
 			else: 
 			?>
 			<tr>
