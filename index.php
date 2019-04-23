@@ -50,7 +50,7 @@ include_once "includes/message.php";
 					      	<input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
 
 					      	<button type="submit" name="btn-deletar" class="btn red">Sim! Quero deletar</button>
-					      	<a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+					      	<a href="#!" class="modal-close waves-effect waves-green btn-flat grey">Cancelar</a>
 					      </form>
 
 					    </div>
